@@ -3,72 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ONEDAYCLEAN | Premium Koltuk Yıkama</title>
+<title>ONEDAYCLEAN | Profesyonel Koltuk Yıkama</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Poppins,sans-serif;
 }
 
 body{
-background:#0d0d0d;
-color:white;
+background:#ffffff;
+color:#222;
 }
 
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2000&auto=format&fit=crop") center/cover;
+header{
+background:#0f766e;
+color:white;
+padding:80px 20px;
 text-align:center;
 }
 
-h1{
-font-size:70px;
-letter-spacing:4px;
+header h1{
+font-size:55px;
+font-weight:700;
 }
 
-p{
+header p{
 margin-top:20px;
-font-size:22px;
-color:#ddd;
+font-size:20px;
 }
 
 .btn{
-margin-top:40px;
-padding:18px 40px;
-background:#2e8b57;
+display:inline-block;
+margin-top:35px;
+background:#14b8a6;
+padding:16px 35px;
+border-radius:40px;
 color:white;
 text-decoration:none;
-border-radius:50px;
-font-size:20px;
+font-size:18px;
+font-weight:600;
 transition:.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
-background:#3fb66d;
+background:#0d9488;
 }
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0f766e;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0f766e;
+}
+
+.about{
+background:#f7f7f7;
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+footer{
+background:#0f766e;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<section class="hero">
+<header>
 
 <h1>ONEDAYCLEAN</h1>
 
-<p>Profesyonel Koltuk • Yatak • Sandalye Yıkama</p>
+<p>Profesyonel Koltuk • L Koltuk • Yatak • Sandalye Temizliği</p>
 
-<a class="btn" href="#">WhatsApp'tan Teklif Al</a>
+<a class="btn" href="https://wa.me/905555555555">
+Hemen Teklif Al
+</a>
+
+</header>
+
+<section>
+
+<h2 class="title">Hizmetlerimiz</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>🛋️ Koltuk Takımı</h3>
+<p>Derinlemesine profesyonel koltuk temizliği.</p>
+</div>
+
+<div class="card">
+<h3>🛋️ L Koltuk</h3>
+<p>Özel ekipmanlarla detaylı temizlik.</p>
+</div>
+
+<div class="card">
+<h3>🛏️ Yatak</h3>
+<p>Toz akarları ve bakterilere karşı hijyen.</p>
+</div>
+
+<div class="card">
+<h3>🪑 Sandalye</h3>
+<p>Leke çıkarma ve kumaş yenileme işlemi.</p>
+</div>
+
+</div>
 
 </section>
+
+<section class="about">
+
+<h2 class="title">Neden ONEDAYCLEAN?</h2>
+
+<p>
+
+✔ Profesyonel Makinalar<br><br>
+
+✔ Hızlı Kuruma<br><br>
+
+✔ Derinlemesine Temizlik<br><br>
+
+✔ Leke Çıkarma<br><br>
+
+✔ Kötü Koku Giderme<br><br>
+
+✔ Müşteri Memnuniyeti Garantisi
+
+</p>
+
+</section>
+
+<footer>
+
+<h2>ONEDAYCLEAN</h2>
+
+<p>Profesyonel Temizlik Hizmetleri</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/905555555555">
+💬
+</a>
 
 </body>
 </html>
