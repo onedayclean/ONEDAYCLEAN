@@ -2,7 +2,6 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -10,35 +9,42 @@ html{
 }
 
 body{
-  background:#061f1b;
+  background:#031c18;
   color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
   overflow-x:hidden;
 }
+
+/* ÜST MENÜ */
 
 nav{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  height:86px;
+  height:90px;
   padding:0 7%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  background:rgba(6,31,27,.88);
-  border-bottom:1px solid rgba(212,176,106,.25);
-  backdrop-filter:blur(14px);
+  background:rgba(3,28,24,.78);
+  border-bottom:1px solid rgba(217,175,91,.22);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
   z-index:1000;
 }
 
 .logo img{
-  height:62px;
+  width:auto;
+  height:72px;
   display:block;
+  object-fit:contain;
 }
 
 nav ul{
   display:flex;
-  gap:34px;
+  align-items:center;
+  gap:38px;
   list-style:none;
 }
 
@@ -51,108 +57,180 @@ nav ul li{
 }
 
 nav ul li:hover{
-  color:#d4b06a;
+  color:#d9af5b;
 }
 
 .call{
-  display:inline-block;
-  padding:13px 24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 28px;
   border-radius:999px;
-  background:#d4b06a;
-  color:#061f1b;
+  background:#d9af5b;
+  color:#031c18;
   text-decoration:none;
+  font-size:15px;
   font-weight:800;
   transition:.3s;
 }
 
 .call:hover{
-  transform:translateY(-2px);
-  background:#ebc77e;
+  transform:translateY(-3px);
+  background:#f0c76f;
 }
+
+/* ANA EKRAN */
 
 .hero{
   position:relative;
   min-height:100vh;
-  padding:130px 7% 60px;
+  padding:150px 7% 80px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 42%,rgba(217,175,91,.18),transparent 24%),
+    radial-gradient(circle at 75% 45%,rgba(19,96,76,.35),transparent 48%),
+    linear-gradient(135deg,#021714 0%,#062d27 55%,#031c18 100%);
+}
+
+/* Dekoratif altın daire */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-110px;
+  top:50%;
+  transform:translateY(-48%);
+  border:1px solid rgba(217,175,91,.32);
+  border-radius:50%;
+  box-shadow:
+    0 0 100px rgba(217,175,91,.08),
+    inset 0 0 100px rgba(217,175,91,.04);
+}
+
+/* Dekoratif iç daire */
+
+.hero::after{
+  content:"1";
+  position:absolute;
+  right:95px;
+  top:50%;
+  transform:translateY(-52%);
+  width:310px;
+  height:310px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:url("hero.png") center center/cover no-repeat;
+  border:2px solid #d9af5b;
+  border-radius:50%;
+  color:#d9af5b;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:190px;
+  font-weight:400;
+  line-height:1;
+  opacity:.82;
 }
 
 .overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(2,24,20,.88) 0%,
-    rgba(2,24,20,.62) 48%,
-    rgba(2,24,20,.22) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,23,20,.12) 0%,
+      rgba(2,23,20,.04) 60%,
+      rgba(2,23,20,.18) 100%
+    );
+  pointer-events:none;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
   width:100%;
-  max-width:1000px;
+  max-width:850px;
   text-align:left;
 }
 
+.hero-content::before{
+  content:"LÜKS KOLTUK YIKAMA HİZMETLERİ";
+  display:inline-block;
+  margin-bottom:24px;
+  color:#d9af5b;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+
 .hero h1{
-  max-width:760px;
-  margin-bottom:22px;
-  font-size:clamp(52px,8vw,110px);
-  line-height:.95;
-  letter-spacing:-4px;
+  max-width:820px;
+  margin-bottom:26px;
+  font-size:clamp(58px,7vw,112px);
+  line-height:.88;
+  letter-spacing:-5px;
   font-weight:900;
 }
 
 .hero h1 span{
   display:block;
-  color:#d4b06a;
+  margin-top:12px;
+  color:#d9af5b;
 }
 
 .hero p{
-  max-width:650px;
-  margin-bottom:36px;
-  color:rgba(255,255,255,.9);
-  font-size:20px;
-  line-height:1.7;
+  max-width:620px;
+  margin-bottom:38px;
+  color:rgba(255,255,255,.78);
+  font-size:19px;
+  line-height:1.75;
 }
 
 .buttons{
   display:flex;
+  align-items:center;
   gap:16px;
   flex-wrap:wrap;
 }
 
 .buttons a{
-  padding:16px 30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:56px;
+  padding:0 30px;
   border-radius:999px;
   text-decoration:none;
+  font-size:14px;
   font-weight:800;
+  letter-spacing:.2px;
   transition:.3s;
 }
 
 .buttons a:first-child{
-  background:#d4b06a;
-  color:#061f1b;
+  background:#d9af5b;
+  color:#031c18;
+  box-shadow:0 15px 35px rgba(217,175,91,.18);
 }
 
 .buttons a:last-child{
-  border:1px solid #d4b06a;
+  border:1px solid rgba(217,175,91,.75);
+  background:rgba(255,255,255,.03);
   color:#fff;
-  background:rgba(255,255,255,.05);
 }
 
 .buttons a:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
+/* TELEFON */
+
 @media(max-width:900px){
+
   nav{
-    height:74px;
+    height:76px;
     padding:0 5%;
   }
 
@@ -161,35 +239,62 @@ nav ul li:hover{
   }
 
   .logo img{
-    height:50px;
+    height:56px;
   }
 
   .call{
-    padding:11px 17px;
-    font-size:14px;
+    padding:12px 18px;
+    font-size:13px;
   }
 
   .hero{
     min-height:100svh;
-    padding:110px 5% 50px;
-    background-position:center;
+    padding:125px 6% 70px;
+    align-items:center;
+  }
+
+  .hero::before{
+    width:330px;
+    height:330px;
+    right:-180px;
+    top:70%;
+  }
+
+  .hero::after{
+    width:190px;
+    height:190px;
+    right:-55px;
+    top:70%;
+    font-size:115px;
+    opacity:.28;
   }
 
   .hero-content{
-    text-align:center;
+    text-align:left;
+  }
+
+  .hero-content::before{
+    font-size:10px;
+    letter-spacing:2.5px;
   }
 
   .hero h1{
-    letter-spacing:-2px;
+    font-size:clamp(49px,15vw,74px);
+    line-height:.9;
+    letter-spacing:-3px;
   }
 
   .hero p{
-    margin-left:auto;
-    margin-right:auto;
-    font-size:17px;
+    max-width:440px;
+    font-size:16px;
   }
 
   .buttons{
-    justify-content:center;
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .buttons a{
+    width:100%;
   }
 }
