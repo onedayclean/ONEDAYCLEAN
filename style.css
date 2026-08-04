@@ -77,14 +77,18 @@ nav ul li:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-   background:
-linear-gradient(rgba(4,29,27,.70), rgba(4,29,27,.88)),
-url("hero.png") center center/cover no-repeat;
+  background:url("hero.png") center center/cover no-repeat;
 }
 
 .overlay{
-    position:absolute;
-    inset:0;
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(2,24,20,.88) 0%,
+    rgba(2,24,20,.62) 48%,
+    rgba(2,24,20,.22) 100%
+  );
 }
 
 .hero-content{
@@ -112,7 +116,7 @@ url("hero.png") center center/cover no-repeat;
 .hero p{
   max-width:650px;
   margin-bottom:36px;
-  color:rgba(255,255,255,.86);
+  color:rgba(255,255,255,.9);
   font-size:20px;
   line-height:1.7;
 }
@@ -139,7 +143,7 @@ url("hero.png") center center/cover no-repeat;
 .buttons a:last-child{
   border:1px solid #d4b06a;
   color:#fff;
-  background:rgba(255,255,255,.04);
+  background:rgba(255,255,255,.05);
 }
 
 .buttons a:hover{
@@ -157,11 +161,11 @@ url("hero.png") center center/cover no-repeat;
   }
 
   .logo img{
-    height:52px;
+    height:50px;
   }
 
   .call{
-    padding:11px 18px;
+    padding:11px 17px;
     font-size:14px;
   }
 
