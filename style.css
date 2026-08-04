@@ -79,7 +79,9 @@ nav ul li:hover{
   justify-content:center;
   background:
     linear-gradient(rgba(2,20,17,.58),rgba(2,20,17,.82)),
-    url("images/tasarim1.png") center/cover no-repeat;
+  background:
+linear-gradient(rgba(2,20,17,.58),rgba(2,20,17,.82)),
+url("TASARIM 1.png") center/cover no-repeat;
 }
 
 .overlay{
